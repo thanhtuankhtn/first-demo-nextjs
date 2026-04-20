@@ -140,18 +140,20 @@ export default function StudentForm({ hocSinhCanSua, onLuu, onDong }: Props) {
         </div>
 
         {/* Nút hành động */}
-        <div className="flex justify-end gap-3 mt-6">
+        <div className="flex justify-end gap-4 mt-8">
           <button
             onClick={onDong}
-            className="px-4 py-2 text-sm rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50 transition"
+            style={{ backgroundColor: "#f3f4f6", color: "#374151", border: "1px solid #d1d5db" }}
+            className="px-6 py-2.5 text-sm rounded-lg font-medium cursor-pointer transition"
           >
-            Đóng
+            ✕ Đóng
           </button>
           <button
             onClick={xuLyLuu}
-            className="px-4 py-2 text-sm rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition font-medium"
+            style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
+            className="px-6 py-2.5 text-sm rounded-lg font-semibold cursor-pointer shadow-md transition"
           >
-            Lưu
+            ✓ Lưu
           </button>
         </div>
       </div>

@@ -67,10 +67,10 @@ export default function DanhSachHocSinhPage() {
         <div className="flex justify-end mb-4">
           <button
             onClick={moFormThem}
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition"
+            style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold shadow-md transition-all cursor-pointer select-none"
           >
-            {/* Icon dấu cộng */}
-            <span className="text-lg leading-none">+</span> Thêm Học Sinh
+            <span className="text-xl leading-none font-bold">+</span> Thêm Học Sinh
           </button>
         </div>
 
@@ -99,8 +99,7 @@ export default function DanhSachHocSinhPage() {
                 danhSach.map((hs, index) => (
                   <tr
                     key={hs.maHocSinh}
-                    // Xen kẽ màu nền cho dễ đọc
-                    className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                    className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"} hover:bg-blue-50 transition-colors`}
                   >
                     <td className="px-4 py-3 font-mono text-blue-700">{hs.maHocSinh}</td>
                     <td className="px-4 py-3 font-medium text-gray-800">{hs.tenHocSinh}</td>
@@ -115,16 +114,16 @@ export default function DanhSachHocSinhPage() {
                         {/* Nút Cập nhật */}
                         <button
                           onClick={() => moFormCapNhat(hs)}
-                          className="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-xs font-medium transition"
+                          className="bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-white px-3 py-1.5 rounded-md text-xs font-semibold shadow-sm hover:shadow transition-all cursor-pointer select-none"
                         >
-                          Cập Nhật
+                          ✏️ Cập Nhật
                         </button>
                         {/* Nút Xóa */}
                         <button
                           onClick={() => xuLyXoa(hs.maHocSinh)}
-                          className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-xs font-medium transition"
+                          className="bg-red-500 hover:bg-red-600 active:bg-red-700 text-white px-3 py-1.5 rounded-md text-xs font-semibold shadow-sm hover:shadow transition-all cursor-pointer select-none"
                         >
-                          Xóa
+                          🗑️ Xóa
                         </button>
                       </div>
                     </td>
