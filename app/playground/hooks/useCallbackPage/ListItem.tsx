@@ -26,7 +26,7 @@ const ListItemComponent = ({ task, onDelete }: Props) => {
     </li>
     </li>
   );
-};tt
+};
 
 // 2. Bọc memo cho hàm đã có tên
 //Trước khi cho phép ListItem render lại
